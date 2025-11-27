@@ -40,9 +40,10 @@ def load_model(model_path: str = None) -> Llama:
             n_ctx=N_CTX,
             n_gpu_layers=N_GPU_LAYERS,
             n_batch=N_BATCH,
+            logits_all=True,  # Enable logprobs support for best-of-N sampling
             verbose=VERBOSE
         )
-        print("✓ Model loaded successfully")
+        print("✓ Model loaded successfully (with logprobs support)")
         return model
 
     except Exception as e:

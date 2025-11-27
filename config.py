@@ -15,7 +15,12 @@ MAX_TOKENS = 512          # Maximum tokens per translation
 
 # Translation Configuration
 CHUNK_SIZE = 20           # Number of segments to translate at once
-CONTEXT_HISTORY = 3       # Number of previous segments for context
+CONTEXT_BEFORE = 10       # Number of previous segments for context
+CONTEXT_AFTER = 5         # Number of following segments for context
+
+# Best-of-N Sampling Configuration
+BEST_OF_N = 3             # Number of candidates to generate (1 = disabled, 3-5 recommended)
+SAMPLING_TEMPERATURE = 0.7  # Temperature for candidate generation (higher = more diverse)
 
 # Language Configuration
 LANGUAGE_MAP = {
